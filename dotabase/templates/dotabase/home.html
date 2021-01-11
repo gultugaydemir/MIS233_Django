@@ -1,17 +1,96 @@
 {% extends "dotabase/base.html" %}
 {% block content %}
-    {% for post in posts %}
 
-        <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
-        <div class="media-body">
-            <div class="article-metadata">
-            <a class="mr-2" href="#">{{ post.author }}</a>
-            <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+
+<tr>
+    <td style="line-height:0px; font-size:0px;">
+
+        <div style="width:300px; height:168px; display:inline-block; overflow:hidden;  margin:20px">
+            <div style="position:relative;"><a href="/Heroes" title="Heroes"><img
+                    alt="Heroes icon.png"
+                    src="https://pages.firstblood.io/pages/wp-content/uploads/2018/07/dota-2-hero-guide-1024x576.jpg"
+                    decoding="async" width="300" height="168"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150x; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:34px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Heroes</span>
             </div>
-            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
         </div>
-        </article>
-    {% endfor %}
+
+
+        <div style="width:300px; height:168px; display:inline-block; overflow:hidden; margin:20px">
+            <div style="position:relative;"><a href="/Beastmaster" title="Beastmaster"><img
+                    alt="Beastmaster icon.png"
+                    src="https://cdna.artstation.com/p/assets/covers/images/007/412/938/large/drew-wolf-dota2items-icon.jpg?1505964419"
+                    decoding="async" width="300" height="168"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Items</span>
+            </div>
+        </div>
+
+
+        <div style="width:150px; height:84px; display:inline-block; overflow:hidden; margin:50px">
+            <div style="position:relative;"><a href="/Chaos_Knight"
+                                               title="Chaos Knight"><img
+                    alt="Chaos Knight icon.png"
+                    src="https://static.wikia.nocookie.net/dota2_gamepedia/images/f/fe/Chaos_Knight_icon.png/revision/latest/scale-to-width-down/150?cb=20160411212259"
+                    decoding="async" width="150" height="84"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Chaos Knight</span>
+            </div>
+        </div>
+
+        <div style="width:150px; height:84px; display:inline-block; overflow:hidden; margin:50px">
+            <div style="position:relative;"><a href="/Doom" title="Doom"><img
+                    alt="Doom icon.png"
+                    src="https://static.wikia.nocookie.net/dota2_gamepedia/images/4/40/Doom_icon.png/revision/latest/scale-to-width-down/150?cb=20160411212104"
+                    decoding="async" width="150" height="84"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Doom</span>
+            </div>
+        </div>
+
+        <div style="width:150px; height:84px; display:inline-block; overflow:hidden; margin:50px">
+            <div style="position:relative;"><a href="/Earth_Spirit"
+                                               title="Earth Spirit"><img
+                    alt="Earth Spirit icon.png"
+                    src="https://static.wikia.nocookie.net/dota2_gamepedia/images/b/be/Earth_Spirit_icon.png/revision/latest/scale-to-width-down/150?cb=20160411211247"
+                    decoding="async" width="150" height="84"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Earth Spirit</span>
+            </div>
+        </div>
+
+
+        <div style="width:150px; height:84px; display:inline-block; overflow:hidden; margin:50px">
+            <div style="position:relative;"><a href="/Huskar" title="Huskar"><img
+                    alt="Huskar icon.png"
+                    src="https://static.wikia.nocookie.net/dota2_gamepedia/images/d/d3/Huskar_icon.png/revision/latest/scale-to-width-down/150?cb=20160411210201"
+                    decoding="async" width="150" height="84"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Huskar</span>
+            </div>
+        </div>
+        <div style="width:150px; height:84px; display:inline-block; overflow:hidden; margin:50px">
+            <div style="position:relative;"><a href="/Io" title="Io"><img alt="Io icon.png"
+                                                                          src="https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Io_icon.png/revision/latest/scale-to-width-down/150?cb=20160411210451"
+                                                                          decoding="async"
+                                                                          width="150"
+                                                                          height="84"/></a>
+            </div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Io</span>
+            </div>
+        </div>
+        <div style="width:150px; height:84px; display:inline-block; overflow:hidden; margin:50px">
+            <div style="position:relative;"><a href="/Kunkka" title="Kunkka"><img
+                    alt="Kunkka icon.png"
+                    src="https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c0/Kunkka_icon.png/revision/latest/scale-to-width-down/150?cb=20160411205729"
+                    decoding="async" width="150" height="84"/></a></div>
+            <div style="pointer-events:none; position:relative; width:150px; height:84px; top:-84px; display:flex; justify-content:center; align-items:flex-end; line-height:30px;">
+                <span style="font-size:17px; color:white; text-shadow:-1px 0 0.2em black, 0 1px 0.2em black, 1px 0 0.2em black, 0 -1px 0.2em black;">Kunkka</span>
+            </div>
+        </div>
+    </td>
+</tr>
+
+
 {% endblock content %}
