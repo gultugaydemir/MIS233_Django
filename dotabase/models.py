@@ -13,9 +13,8 @@ class Post(models.Model):
 
 
 class Hero(models.Model):
+    heroID = models.IntegerField()
     name = models.CharField(max_length=50)
-    isPassive = models.BinaryField()
-    description = models.CharField(max_length=200)
     team = models.CharField(max_length=30) #radiand or dire
     primary_attribute = models.CharField(max_length=50) #agi int or str
     attack_type = models.CharField(max_length=10) #ranged or melee
@@ -43,8 +42,8 @@ class Hero(models.Model):
 
 class Item(models.Model):
     name = models.CharField(max_length=50)
-    attack_type = models.CharField(max_length=10) #ranged or melee
-    roles = models.CharField(max_length=200) #carry, support, escape, ganker, etc.
+    isPassive = models.BinaryField()   
+    description = models.CharField(max_length=200)
     price = models.IntegerField()
     
     
