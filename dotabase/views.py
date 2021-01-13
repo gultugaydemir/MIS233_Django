@@ -15,7 +15,10 @@ def new_to_game(request):
     return render(request, 'dotabase/new_to_game.html', {'title': 'New to Dota2?'})
 
 def esports(request):
-    return render(request, 'dotabase/esports.html', {'title': 'New to Dota2?'})
+    return render(request, 'dotabase/esports.html', {'title': 'E-Sports'})
+
+def heroes(request):
+    return render(request, 'dotabase/heroes.html', {'title': 'Heroes'})
 
 
 
