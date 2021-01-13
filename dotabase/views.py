@@ -20,6 +20,21 @@ def esports(request):
 def heroes(request):
     return render(request, 'dotabase/heroes.html', {'title': 'Heroes'})
 
+def items(request):
+    return render(request, 'dotabase/items.html', {'title': 'Items'})
+
+def talents(request):
+    return render(request, 'dotabase/talents.html', {'title': 'Talents'})
+
+def events(request):
+    return render(request, 'dotabase/events.html', {'title': 'Events'})
+
+def patches(request):
+    return render(request, 'dotabase/patches.html', {'title': 'Patches'})
+
+def creeps(request):
+    return render(request, 'dotabase/creeps.html', {'title': 'Creeps'})
+
 
 
 
