@@ -1,4 +1,35 @@
-{% extends "dotabase/base.html" %}
+
+
 {% block content %}
-    <h1>Burada heroes yer alacak.</h1>
-{% endblock content %}
+{% for hero in heroes %}
+
+<table class="infobox" style="text-align:center; font-size:88%; line-height:1.5em; white-space:nowrap;">
+    <tbody>
+    <tr>
+        <th style="color:white; background: linear-gradient(0deg, #B9500B -10%, #1B1E21 30%, #1B1E21 90%, #B9500B); font-size:112%;">
+            Abaddon
+            <div style="color:#1B1E21;"><a href="/File:Abaddon_icon.png" class="image"><img alt="Abaddon icon.png"
+                                                                                            src="https://static.wikia.nocookie.net/dota2_gamepedia/images/2/26/Abaddon_icon.png/revision/latest/scale-to-width-down/256?cb=20170417182638"
+                                                                                            decoding="async"
+                                                                                            width="256"
+                                                                                            height="144"></a></div>
+            <div style="width: 100%; padding: 4px 0; display: grid; grid-template-columns: auto auto auto; color: white; text-align: center;">
+                <div id="primaryAttribute"><a title="Strength"><img
+                        alt="Strength attribute symbol.png"
+                        src="https://static.wikia.nocookie.net/dota2_gamepedia/images/7/7a/Strength_attribute_symbol.png/revision/latest/scale-to-width-down/40?cb=20180323111829"
+                        decoding="async" width="40" height="40"></a></div>
+                <div><a title="Agility"><img alt="Agility attribute symbol.png"
+                                                             src="https://static.wikia.nocookie.net/dota2_gamepedia/images/2/2d/Agility_attribute_symbol.png/revision/latest/scale-to-width-down/40?cb=20180323111717"
+                                                             decoding="async" width="40" height="40"></a></div>
+                <div><a title="Intelligence"><img alt="Intelligence attribute symbol.png"
+                                                                       src="https://static.wikia.nocookie.net/dota2_gamepedia/images/5/56/Intelligence_attribute_symbol.png/revision/latest/scale-to-width-down/40?cb=20180323111753"
+                                                                       decoding="async" width="40" height="40"></a>
+                </div>
+                <div>{{ hero.strength }}</div>
+                <div>{{ hero.agility }}</div>
+                <div>{{ hero.intelligence }}</div>
+            </div>
+        </th>
+    </tr>
+    {% endfor %}
+    {% endblock content %}

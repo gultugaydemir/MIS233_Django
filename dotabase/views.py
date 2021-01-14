@@ -1,12 +1,9 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Heroes
 
 
 def home(request):
-    context = {
-        'posts': Post.objects.all()
-    }
-    return render(request, 'dotabase/home.html', context)
+    return render(request, 'dotabase/home.html', {'title': 'Home'})
 
 def about(request):
     return render(request, 'dotabase/about.html', {'title': 'About'})
@@ -18,7 +15,10 @@ def esports(request):
     return render(request, 'dotabase/esports.html', {'title': 'E-Sports'})
 
 def heroes(request):
-    return render(request, 'dotabase/heroes.html', {'title': 'Heroes'})
+    context = {
+        'heroes': Heroes.objects.all()
+    }
+    return render(request, 'dotabase/heroes.html', context)
 
 def items(request):
     return render(request, 'dotabase/items.html', {'title': 'Items'})
