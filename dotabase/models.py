@@ -9,6 +9,7 @@ class Heroes(models.Model):
     image = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/7/7a/Strength_attribute_symbol.png/revision/latest/scale-to-width-down/40?cb=20180323111829", max_length=300)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     def _str_(self):
         return self.name
 =======
@@ -49,3 +50,7 @@ class Item(models.Model):
     
     
 >>>>>>> b4753aacddd4250863225c73468441af0ede37a8
+=======
+    def _str_(self):
+        return self.name
+>>>>>>> 237bdc1d9b097164113d58d3185e703f3349942c
