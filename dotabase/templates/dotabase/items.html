@@ -1,4 +1,83 @@
-{% extends "dotabase/base.html" %}
 {% block content %}
-    <h1>Burada items yer alacak.</h1>
+{% for item in items %}
+<body style="background-color:rgb(20,0,0);">
+<table class="infobox" style="text-align:center; margin-left:auto; margin-right: auto; font-size:88%; line-height:1.5em;">
+    <tbody>
+    <tr>
+        <th style="font-size:110%; background-color:#00008B; color:white; padding:3px 5px;"> {{ item.item_name }}
+            <div style="float:right;">
+                <div style="display:inline-block; margin:0 2px; padding:0 0.2em; background-color:white; color:#B44335;"></div>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <td id="itemmainimage"><a class="image"><img alt="Item"
+                                                     src= {{ item.item_image }}
+                                                     decoding="async" width="337" height="150"/></a>
+        </td>
+    </tr>
+
+
+    <tr>
+        <th>
+            <div style="display:flex; align-items:center; background-color:#B44335; color:white;">
+                <div style="width:50%; background-color:#B44335;">Cost<br/> {{ item.cost }} </div>
+                <div style="width:50%;">Bought From<br/> {{ item.bought_from }}</div>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <div style="display:flex; align-items:center; background-color:#DAA520; color:white;">
+                <div style="width:33.333333%; width: calc(100% / 3); background-color:#DAA520;">Initial Stock<br/> {{ item.initial_stock }}
+                </div>
+                <div style="width:33.333333%; width: calc(100% / 3);">Max Stock<br/> {{ item.max_stock }} </div>
+                <div style="width:33.333333%; width: calc(100% / 3); background-color:#DAA520;">Restock Time<br/> {{ item.restock_time }}
+                </div>
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <table style="text-align:left;">
+                <tbody>
+                <tr>
+                    <th style="width:25%;">
+                    </th>
+                    <th style="width:75%;">
+                    </th>
+                </tr>
+
+                <table style="border-style:solid; width:100%; background-color:4B8B3B; color:white;">
+
+                    <tr>
+                        <th>Charges
+                        </th>
+                        <td> {{ item.charges }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Disassemble?
+                        </th>
+                        <td> {{ item.disassemble|yesno }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span>Alert allies?</span>
+                        </th>
+                        <td> {{ item.alert_allies|yesno }}
+                        </td>
+                    </tr>
+                </table>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <br><br>
+    </tbody>
+</table>
+</body>
+
+{% endfor %}
 {% endblock content %}

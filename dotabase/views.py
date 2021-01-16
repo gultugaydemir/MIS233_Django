@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Heroes
+from .models import Heroes, Items
 
 
 def home(request):
@@ -21,7 +21,10 @@ def heroes(request):
     return render(request, 'dotabase/heroes.html', context)
 
 def items(request):
-    return render(request, 'dotabase/items.html', {'title': 'Items'})
+    context = {
+        'items': Items.objects.all()
+    }
+    return render(request, 'dotabase/items.html', context)
 
 def talents(request):
     return render(request, 'dotabase/talents.html', {'title': 'Talents'})
