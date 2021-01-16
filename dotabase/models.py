@@ -8,7 +8,6 @@ class Heroes(models.Model):
     intelligence = models.CharField(max_length=3)
     image = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/7/7a/Strength_attribute_symbol.png/revision/latest/scale-to-width-down/40?cb=20180323111829", max_length=300)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     def _str_(self):
         return self.name
