@@ -1,18 +1,17 @@
-
-
 {% block content %}
 {% for hero in heroes %}
+<body style="background-color:rgb(20,0,0);">
 
-<table class="infobox" style="text-align:center; font-size:88%; line-height:1.5em; white-space:nowrap;">
+<table class="infobox" style="text-align:center; margin-left:auto; margin-right: auto; font-size:88%; line-height:1.5em; white-space:nowrap;">
     <tbody>
     <tr>
         <th style="color:white; background: linear-gradient(0deg, #B9500B -10%, #1B1E21 30%, #1B1E21 90%, #B9500B); font-size:112%;">
-            Abaddon
-            <div style="color:#1B1E21;"><a href="/File:Abaddon_icon.png" class="image"><img alt="Abaddon icon.png"
-                                                                                            src="https://static.wikia.nocookie.net/dota2_gamepedia/images/2/26/Abaddon_icon.png/revision/latest/scale-to-width-down/256?cb=20170417182638"
+            {{ hero.name }}
+            <div style="color:#1B1E21;"><a class="image"><img alt="Hero icon.png"
+                                                                                            src= {{ hero.image }}
                                                                                             decoding="async"
-                                                                                            width="256"
-                                                                                            height="144"></a></div>
+                                                                                            width="400"
+                                                                                            height="225"></a></div>
             <div style="width: 100%; padding: 4px 0; display: grid; grid-template-columns: auto auto auto; color: white; text-align: center;">
                 <div id="primaryAttribute"><a title="Strength"><img
                         alt="Strength attribute symbol.png"
@@ -31,5 +30,10 @@
             </div>
         </th>
     </tr>
+    <br><br>
+    </tbody>
+</table>
+</body>
+
     {% endfor %}
     {% endblock content %}
