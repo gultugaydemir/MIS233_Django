@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Heroes, Items, Buildings, Events
 from .forms import WeeklyPollsForm
 
@@ -51,10 +51,12 @@ def weeklypoll(request):
         form = WeeklyPollsForm(request.POST)
         if form.is_valid():
             form.save()
-
-
+            return redirect('/thankyou')
 
     form = WeeklyPollsForm()
     return render(request, 'dotabase/form.html', {'form': form})
+
+def thankyou(request):
+    return render(request, 'dotabase/thankyou.html', {'title': 'Thank you!'})
 
 # Create your views here.

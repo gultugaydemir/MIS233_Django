@@ -13,4 +13,5 @@ urlpatterns = [
     path('runes/', views.runes, name = 'dotabase-runes'),
     path('creeps/', views.creeps, name = 'dotabase-creeps'),
     path('polls/', views.weeklypoll),
+    path('thankyou/', views.thankyou)
 ]
