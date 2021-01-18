@@ -32,3 +32,24 @@ class Items(models.Model):
 
     def __str__(self):
         return self.item_name
+
+class Buildings(models.Model):
+    building_name = models.CharField(max_length=100)
+    building_image = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/5/52/Tower_Protection_icon.png/revision/latest/scale-to-width-down/128?cb=20160426211855")
+    radius = models.CharField(max_length=5)
+    duration = models.FloatField(max_length=6)
+    ability = models.CharField(max_length=100)
+    affects = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.building_name
+
+class Events(models.Model):
+    event_name = models.CharField(max_length=100)
+    event_banner = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/6/6c/Main_Page_Giant_Banner_New_Bloom_2020.jpg/revision/latest/scale-to-width-down/800?cb=20200124152923")
+    event_date = models.DateField(auto_now=False, auto_now_add=False)
+
+    def __str__(self):
+        return self.event_name
+
+
