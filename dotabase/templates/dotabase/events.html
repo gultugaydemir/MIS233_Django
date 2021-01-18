@@ -1,4 +1,24 @@
-{% extends "dotabase/base.html" %}
 {% block content %}
-    <h1>Burada events yer alacak.</h1>
+{% for event in events %}
+
+<table class="wikitable" style="text-align:center; border-style:solid; color:white; margin-left:auto; margin-right: auto; background-color:rgb(39,31,34);">
+<tbody><tr>
+<th class="header" scope="col" width="130">Event
+</th>
+<th class="header" scope="col" width="800">Banner
+</th>
+<th class="header" scope="col" width="130">Date
+</th></tr>
+<tr>
+<td><a title="New Bloom 2020"> {{ event.event_name }} </a></td>
+<td><img alt="Banner" src= {{ event.event_banner }} decoding="async" width="800" height="125" /></a></td>
+<td> {{ event.event_date }}
+</td></tr>
+
+</td></tr></tbody></table>
+</table></td></tr></tbody></table>
+
+{% endfor %}
 {% endblock content %}
+
+

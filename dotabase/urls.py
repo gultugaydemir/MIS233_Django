@@ -8,8 +8,8 @@ urlpatterns = [
     path('esports/', views.esports, name = 'dotabase-esports'),
     path('heroes/', views.heroes, name = 'dotabase-heroes'),
     path('items/', views.items, name = 'dotabase-items'),
-    path('talents/', views.talents, name = 'dotabase-talents'),
+    path('buildings/', views.buildings, name = 'dotabase-buildings'),
     path('events/', views.events, name = 'dotabase-events'),
-    path('patches/', views.patches, name = 'dotabase-patches'),
+    path('runes/', views.runes, name = 'dotabase-runes'),
     path('creeps/', views.creeps, name = 'dotabase-creeps'),
 ]
