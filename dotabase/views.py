@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Heroes, Items
-
+from .forms import WeeklyPollsForm
 
 def home(request):
     return render(request, 'dotabase/home.html', {'title': 'Home'})
@@ -38,7 +38,16 @@ def patches(request):
 def creeps(request):
     return render(request, 'dotabase/creeps.html', {'title': 'Creeps'})
 
+def weeklypoll(request):
+
+    if request.method == 'POST':
+        form = WeeklyPollsForm(request.POST)
+        if form.is_valid():
+            form.save()
 
 
+
+    form = WeeklyPollsForm()
+    return render(request, 'dotabase/form.html', {'form': form})
 
 # Create your views here.

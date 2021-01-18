@@ -1,6 +1,13 @@
 from django.db import models
 
 
+class WeeklyPolls(models.Model):
+    answer= models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.answer
+
+
 class Heroes(models.Model):
     name = models.CharField(max_length=100)
     strength = models.CharField(max_length=3)
