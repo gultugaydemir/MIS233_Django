@@ -2,7 +2,7 @@
 {% extends "dotabase/base.html" %}
 {% block content %}
 {% load crispy_forms_tags %}
-<h1 style="color:white">Who is your Favorite Character?</h1>
+<h1 style=color:white>Which hero did you play in your last game?</h1>
     <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
