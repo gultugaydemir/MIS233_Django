@@ -46,3 +46,14 @@ class Events(models.Model):
         return self.event_name
 
 
+class Runes(models.Model):
+    rune_name = models.CharField(max_length=100)
+    icon = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c9/Bounty_Rune_minimap_icon.png/revision/latest/scale-to-width-down/32?cb=20150121151359")
+    model = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/0/09/Rune_of_Bounty_model.png/revision/latest/scale-to-width-down/88?cb=20161214004322")
+    bottle = models.URLField(default="https://static.wikia.nocookie.net/dota2_gamepedia/images/c/ce/Bottle_%28Bounty%29_icon.png/revision/latest/scale-to-width-down/88?cb=20170529213537")
+    initial_gold = models.CharField(max_length=6)
+    extra_gold = models.CharField(max_length=6)
+
+    def __str__(self):
+        return self.rune_name
+
