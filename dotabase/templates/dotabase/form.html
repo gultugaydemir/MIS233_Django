@@ -1,0 +1,11 @@
+
+{% extends "dotabase/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h1>Who is your Favorite Character?</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}
